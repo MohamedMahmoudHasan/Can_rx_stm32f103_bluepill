@@ -1,0 +1,33 @@
+#ifndef RCC_CONFIG_H
+#define RCC_CONFIG_H
+
+# define RCC_CLOCK_TYPE     RCC_HSE_CRYSTAL        /*CHOOSE HERE RCC CLOCK MAIN SOURCE*/
+																			
+#if    RCC_CLOCK_TYPE == RCC_PLL   /*select value incase of PPL input*/
+
+   #define RCC_PLL_INPUT  RCC_PLL_IN_HSI_DIV_2    /*CHOOSE HERE PLL CLOCK MAIN SOURCE*/
+	 
+#endif
+
+
+
+										
+#if   (  RCC_CLOCK_TYPE == RCC_PLL ) 
+#define RCC_PLL_MAL_VAL    4                      /*CHOOSE HERE PLL CLOCK PRESCALLER*/
+#endif
+
+#define RCC_ADC_PRESCALLER    RCC_PRESCALLER_BY_2            /*CHOOSE HERE ADC CLOCK PRESCALLER*/
+ 
+#define RCC_APB2_PRESCALLER   RCC_PRESCALLER_BY_0            /*CHOOSE HERE APB2 BUS CLOCK PRESCALLER*/
+
+#define RCC_APB1_PRESCALLER   RCC_PRESCALLER_BY_0           /*CHOOSE HERE APB1 BUS CLOCK PRESCALLER*/
+
+#define RCC_AHP_PRESCALLER    RCC_PRESCALLER_BY_0         /*CHOOSE HERE AHB BUS CLOCK PRESCALLER*/
+ 
+#define RCC_USB_PRESCALLER    PLL_CLOCK_DEVIDED_BY_0            /*CHOOSE HERE USB CLOCK PRESCALLER*/
+
+#define CSS_ON                TURN_OFF
+ 
+#define RCC_MCO_PIN          NO_CLOCK                     /*CHOOSE HERE OUTPUT CLOCK PIN SOURCE*/
+
+#endif

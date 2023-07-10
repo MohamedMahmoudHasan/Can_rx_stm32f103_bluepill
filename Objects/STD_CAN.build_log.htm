@@ -1,0 +1,1073 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mohamed mahmoud, seitech, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.13.1
+Assembler:       Armasm.exe V6.13.1
+Linker/Locator:  ArmLink.exe V6.13.1
+Library Manager: ArmAr.exe V6.13.1
+Hex Converter:   FromElf.exe V6.13.1
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+F:\embedded systems\seitech\final_can_rx\Can_Rx\STD_CAN.uvprojx
+Project File Date:  07/09/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.13.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'stm32f103xx'
+Files/main.c(2): warning: In file included from...
+./Files/BIT_MATH.h(8): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8354): note: previous definition is here
+#define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+        ^
+Files/main.c(2): warning: In file included from...
+./Files/BIT_MATH.h(22): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define SET_BIT(REG,BIT) (REG|=(1<<BIT))
+        ^
+./Files/BIT_MATH.h(8): note: previous definition is here
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+./Files/BIT_MATH.h(24): warning: 'CLEAR_BIT' macro redefined [-Wmacro-redefined]
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8356): note: previous definition is here
+#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+        ^
+Files/main.c(2): warning: In file included from...
+./Files/BIT_MATH.h(36): warning: 'GET_BIT' macro redefined [-Wmacro-redefined]
+#define GET_BIT(REG,BIT)  ((REG >> BIT) & 1  )
+        ^
+./Files/BIT_MATH.h(14): note: previous definition is here
+#define    GET_BIT(REG,BIT)    ((REG>>BIT) & 1)
+           ^
+Files/main.c(4): warning: In file included from...
+./Files/GPIO_interface2.h(8): warning: 'GPIOA' macro redefined [-Wmacro-redefined]
+#define GPIOA        0
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: previous definition is here
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+        ^
+Files/main.c(4): warning: In file included from...
+./Files/GPIO_interface2.h(9): warning: 'GPIOB' macro redefined [-Wmacro-redefined]
+#define GPIOB        1
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: previous definition is here
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+        ^
+Files/main.c(4): warning: In file included from...
+./Files/GPIO_interface2.h(10): warning: 'GPIOC' macro redefined [-Wmacro-redefined]
+#define GPIOC        2
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: previous definition is here
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(12): warning: 'WWDG' macro redefined [-Wmacro-redefined]
+#define     WWDG                                0             /*Window Watchdog interrupt*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1398): note: previous definition is here
+#define WWDG                ((WWDG_TypeDef *) WWDG_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(15): warning: 'RTC' macro redefined [-Wmacro-redefined]
+#define     RTC                                 3              /*RTC GLOBAL INTERRUPT*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1397): note: previous definition is here
+#define RTC                 ((RTC_TypeDef *) RTC_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(16): warning: 'FLASH' macro redefined [-Wmacro-redefined]
+#define     FLASH                               4              /*FLASH GLOBALINTERRUPT*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1453): note: previous definition is here
+#define FLASH               ((FLASH_TypeDef *) FLASH_R_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(17): warning: 'RCC' macro redefined [-Wmacro-redefined]
+#define     RCC                         5              /*RCC global interrupt*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1451): note: previous definition is here
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(30): warning: 'ADC3' macro redefined [-Wmacro-redefined]
+#define     ADC3                                47
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1429): note: previous definition is here
+#define ADC3                ((ADC_TypeDef *) ADC3_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(33): warning: 'SPI1' macro redefined [-Wmacro-redefined]
+#define     SPI1                                35
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1426): note: previous definition is here
+#define SPI1                ((SPI_TypeDef *) SPI1_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(34): warning: 'SPI2' macro redefined [-Wmacro-redefined]
+#define     SPI2                                36              
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1400): note: previous definition is here
+#define SPI2                ((SPI_TypeDef *) SPI2_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(35): warning: 'SPI3' macro redefined [-Wmacro-redefined]
+#define     SPI3                                51
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1401): note: previous definition is here
+#define SPI3                ((SPI_TypeDef *) SPI3_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(43): warning: 'TIM2' macro redefined [-Wmacro-redefined]
+#define     TIM2                                28
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1388): note: previous definition is here
+#define TIM2                ((TIM_TypeDef *) TIM2_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(44): warning: 'TIM3' macro redefined [-Wmacro-redefined]
+#define     TIM3                                29
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1389): note: previous definition is here
+#define TIM3                ((TIM_TypeDef *) TIM3_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(45): warning: 'TIM4' macro redefined [-Wmacro-redefined]
+#define     TIM4                                30
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1390): note: previous definition is here
+#define TIM4                ((TIM_TypeDef *) TIM4_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(46): warning: 'TIM5' macro redefined [-Wmacro-redefined]
+#define     TIM5                                50
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1391): note: previous definition is here
+#define TIM5                ((TIM_TypeDef *) TIM5_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(47): warning: 'TIM6' macro redefined [-Wmacro-redefined]
+#define     TIM6                                54
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1392): note: previous definition is here
+#define TIM6                ((TIM_TypeDef *) TIM6_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(48): warning: 'TIM7' macro redefined [-Wmacro-redefined]
+#define     TIM7                                55
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1393): note: previous definition is here
+#define TIM7                ((TIM_TypeDef *) TIM7_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(56): warning: 'USART1' macro redefined [-Wmacro-redefined]
+#define     USART1                              37
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: previous definition is here
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(57): warning: 'USART2' macro redefined [-Wmacro-redefined]
+#define     USART2                              38
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: previous definition is here
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(58): warning: 'USART3' macro redefined [-Wmacro-redefined]
+#define     USART3                              39
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: previous definition is here
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(59): warning: 'UART4' macro redefined [-Wmacro-redefined]
+#define     UART4                               52
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1404): note: previous definition is here
+#define UART4               ((USART_TypeDef *) UART4_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(60): warning: 'UART5' macro redefined [-Wmacro-redefined]
+#define     UART5                               53
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1405): note: previous definition is here
+#define UART5               ((USART_TypeDef *) UART5_BASE)
+        ^
+Files/main.c(6): warning: In file included from...
+./Files/NVIC_Interface.h(92): warning: 'SDIO' macro redefined [-Wmacro-redefined]
+#define     SDIO              49        /*SDIO global interrupt*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1436): note: previous definition is here
+#define SDIO                ((SDIO_TypeDef *) SDIO_BASE)
+        ^
+Files/main.c(7): warning: non-portable path to file '"USART_interface.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "USART_Interface.h"
+         ^~~~~~~~~~~~~~~~~~~
+         "USART_interface.h"
+Files/main.c(31): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                 GPIO_VoidSetPinDirection(GPIOA,PIN11 , INPUT_FLOATING);   
+                                                        ^
+./Files/GPIO_interface2.h(43): note: expanded from macro 'INPUT_FLOATING'
+#define        INPUT_FLOATING            0b0100
+                                         ^
+Files/main.c(32): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                       GPIO_VoidSetPinDirection(GPIOA,PIN12 , OUTPUT_2MHZ_AFPP); 
+                                                              ^
+./Files/GPIO_interface2.h(55): note: expanded from macro 'OUTPUT_2MHZ_AFPP'
+#define       OUTPUT_2MHZ_AFPP            0b1010
+                                          ^
+Files/main.c(35): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                         GPIO_VoidSetPinDirection(GPIOA,8,OUTPUT_2MHZ_PP); // config A8 as output
+                                                          ^
+./Files/GPIO_interface2.h(53): note: expanded from macro 'OUTPUT_2MHZ_PP'
+#define       OUTPUT_2MHZ_PP              0b0010
+                                          ^
+Files/main.c(36): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                         GPIO_VoidSetPinDirection(GPIOA,2,OUTPUT_2MHZ_PP); // config A8 as output
+                                                          ^
+./Files/GPIO_interface2.h(53): note: expanded from macro 'OUTPUT_2MHZ_PP'
+#define       OUTPUT_2MHZ_PP              0b0010
+                                          ^
+Files/main.c(8): warning: In file included from...
+./Files/CAN.h(185): warning: padding size of 'CAN_FilterInitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+./Files/CAN.h(229): warning: padding struct 'CanRxMsg' with 2 bytes to align 'ID' [-Wpadded]
+        u32 ID;  // message identifier
+            ^
+./Files/CAN.h(223): warning: padding size of 'CanRxMsg' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+35 warnings generated.
+compiling main.c...
+Files/GPIO_program2.c(2): warning: In file included from...
+./Files/BIT_MATH.h(8): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8354): note: previous definition is here
+#define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+        ^
+Files/GPIO_program2.c(2): warning: In file included from...
+./Files/BIT_MATH.h(22): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define SET_BIT(REG,BIT) (REG|=(1<<BIT))
+        ^
+./Files/BIT_MATH.h(8): note: previous definition is here
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+./Files/BIT_MATH.h(24): warning: 'CLEAR_BIT' macro redefined [-Wmacro-redefined]
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8356): note: previous definition is here
+#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+        ^
+Files/GPIO_program2.c(2): warning: In file included from...
+./Files/BIT_MATH.h(36): warning: 'GET_BIT' macro redefined [-Wmacro-redefined]
+#define GET_BIT(REG,BIT)  ((REG >> BIT) & 1  )
+        ^
+./Files/BIT_MATH.h(14): note: previous definition is here
+#define    GET_BIT(REG,BIT)    ((REG>>BIT) & 1)
+           ^
+Files/GPIO_program2.c(4): warning: In file included from...
+./Files/GPIO_interface2.h(8): warning: 'GPIOA' macro redefined [-Wmacro-redefined]
+#define GPIOA        0
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: previous definition is here
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+        ^
+Files/GPIO_program2.c(4): warning: In file included from...
+./Files/GPIO_interface2.h(9): warning: 'GPIOB' macro redefined [-Wmacro-redefined]
+#define GPIOB        1
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: previous definition is here
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+        ^
+Files/GPIO_program2.c(4): warning: In file included from...
+./Files/GPIO_interface2.h(10): warning: 'GPIOC' macro redefined [-Wmacro-redefined]
+#define GPIOC        2
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: previous definition is here
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+        ^
+Files/GPIO_program2.c(17): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                                                                         GPIOA_CRL &= ~((BITS_CLEAR_MASK) << (Copy_u8Pin * BITS_SHIFT_NUMBER));  /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                         ^
+./Files/GPIO_private2.h(52): note: expanded from macro 'BITS_CLEAR_MASK'
+#define  BITS_CLEAR_MASK                        0b1111           /*USED IN MASKING OPERATION TO CLEAR 4 BITS OF MODE*/
+                                                ^
+Files/GPIO_program2.c(17): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                         GPIOA_CRL &= ~((BITS_CLEAR_MASK) << (Copy_u8Pin * BITS_SHIFT_NUMBER));  /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                   ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(18): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                         GPIOA_CRL |=  ((Copy_u8Mode)<< (Copy_u8Pin * BITS_SHIFT_NUMBER ));     /*SET 4 BITS OF NEW MODE */
+                                                                                   ~~   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(25): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                                                                                        GPIOA_CRH &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));  /*CLEAR 4 BITS OD MODE TO SET A NEW ONE */
+                                                                                                        ^
+./Files/GPIO_private2.h(52): note: expanded from macro 'BITS_CLEAR_MASK'
+#define  BITS_CLEAR_MASK                        0b1111           /*USED IN MASKING OPERATION TO CLEAR 4 BITS OF MODE*/
+                                                ^
+Files/GPIO_program2.c(25): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                                        GPIOA_CRH &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));  /*CLEAR 4 BITS OD MODE TO SET A NEW ONE */
+                                                                                                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                            GPIOA_CRH |=  ((Copy_u8Mode)<< (Copy_u8Pin * BITS_SHIFT_NUMBER ));          /*SET 4 BITS OF NEW MODE */
+                                                                                      ~~   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(35): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                                                                          GPIOB_CRL &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));   /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                          ^
+./Files/GPIO_private2.h(52): note: expanded from macro 'BITS_CLEAR_MASK'
+#define  BITS_CLEAR_MASK                        0b1111           /*USED IN MASKING OPERATION TO CLEAR 4 BITS OF MODE*/
+                                                ^
+Files/GPIO_program2.c(35): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                          GPIOB_CRL &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));   /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                    ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(36): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                          GPIOB_CRL |=  ((Copy_u8Mode)<< (Copy_u8Pin * BITS_SHIFT_NUMBER ));    /*SET 4 BITS OF NEW MODE */
+                                                                                    ~~   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(43): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                                                                                        GPIOB_CRH &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));    /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                                        ^
+./Files/GPIO_private2.h(52): note: expanded from macro 'BITS_CLEAR_MASK'
+#define  BITS_CLEAR_MASK                        0b1111           /*USED IN MASKING OPERATION TO CLEAR 4 BITS OF MODE*/
+                                                ^
+Files/GPIO_program2.c(43): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                                        GPIOB_CRH &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));    /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(44): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                            GPIOB_CRH |=  ((Copy_u8Mode)<< (Copy_u8Pin * BITS_SHIFT_NUMBER ));                  /*SET 4 BITS OF NEW MODE */
+                                                                                      ~~   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(54): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+                                                                                        GPIOC_CRH &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));     /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                                        ^
+./Files/GPIO_private2.h(52): note: expanded from macro 'BITS_CLEAR_MASK'
+#define  BITS_CLEAR_MASK                        0b1111           /*USED IN MASKING OPERATION TO CLEAR 4 BITS OF MODE*/
+                                                ^
+Files/GPIO_program2.c(54): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                                        GPIOC_CRH &= ~((BITS_CLEAR_MASK)<< (Copy_u8Pin * BITS_SHIFT_NUMBER));     /*CLEAR 4 BITS OF MODE TO SET A NEW ONE */
+                                                                                                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(55): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                                                                            GPIOC_CRH |=  ((Copy_u8Mode)<< (Copy_u8Pin * BITS_SHIFT_NUMBER ));             /*SET 4 BITS OF NEW MODE */
+                                                                                      ~~   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(191): warning: implicit conversion loses integer precision: 'uint32' (aka 'unsigned long') to 'uint16' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                   Result_Value = GPIOA_IDR;  break;                      /* Result_Value = PIN VALUE*/
+                                ~ ^~~~~~~~~
+./Files/GPIO_private2.h(18): note: expanded from macro 'GPIOA_IDR'
+#define GPIOA_IDR          *((uint32*)(GPIOA_BASE_ADDRESS+0x08))
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(194): warning: implicit conversion loses integer precision: 'uint32' (aka 'unsigned long') to 'uint16' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                   Result_Value = GPIOB_IDR;  break;                   /*SET VALUE OF A CERTAIN PIN IN PORT B*/
+                                ~ ^~~~~~~~~
+./Files/GPIO_private2.h(31): note: expanded from macro 'GPIOB_IDR'
+#define GPIOB_IDR          *((uint32*)(GPIOB_BASE_ADDRESS+0x08))
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(197): warning: implicit conversion loses integer precision: 'uint32' (aka 'unsigned long') to 'uint16' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                   Result_Value = GPIOC_IDR;  break;                  /*SET VALUE OF A CERTAIN PIN IN PORT C*/
+                                ~ ^~~~~~~~~
+./Files/GPIO_private2.h(43): note: expanded from macro 'GPIOC_IDR'
+#define GPIOC_IDR          *((uint32*)(GPIOC_BASE_ADDRESS+0x08))
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/GPIO_program2.c(249): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT(GPIOA_LCK,LCK_BIT);                    /*CLEAR LCK BIT TO BEGIN WRITING SEQUENCE*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/GPIO_program2.c(253): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT  (GPIOA_LCK,LCK_BIT);                            /*WRITE ZERO*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/GPIO_program2.c(262): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT(GPIOA_LCK,LCK_BIT);                    /*CLEAR LCK BIT TO BEGIN WRITING SEQUENCE*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/GPIO_program2.c(266): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT  (GPIOA_LCK,LCK_BIT);                            /*WRITE ZERO*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/GPIO_program2.c(277): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT(GPIOA_LCK,LCK_BIT);                    /*CLEAR LCK BIT TO BEGIN WRITING SEQUENCE*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/GPIO_program2.c(281): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT  (GPIOA_LCK,LCK_BIT);                            /*WRITE ZERO*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+31 warnings generated.
+compiling GPIO_program2.c...
+Files/CAN .c(14): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  CAN1->MCR &= ~CAN_MCR_SLEEP;
+            ~~ ^~~~~~~~~~~~~~
+Files/CAN .c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  CAN1->FMR &= ~CAN_FMR_FINIT;     //release init mode for the input filter */
+            ~~ ^~~~~~~~~~~~~~
+Files/CAN .c(2): warning: In file included from...
+./Files/CAN.h(185): warning: padding size of 'CAN_FilterInitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Files/CAN .c(250): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                CANx->sTxMailBox[Local_u8TransMailboxNumber].TIR |= (TxMessage->IDE << 2) | (TxMessage->RTR << 1 ) ;//setrtr and ide of input fram
+                                                                 ~~ ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+Files/CAN .c(266): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                CANx->sTxMailBox[Local_u8TransMailboxNumber].TDTR = (CANx->sTxMailBox[Local_u8TransMailboxNumber].TDTR & (~0x0f))               //set data length
+                                                                                                                       ~  ^~~~~
+Files/CAN .c(278): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                CANx->sTxMailBox[Local_u8TransMailboxNumber].TDLR |= (TxMessage->DATA[Local_u8TransDataCounter] << (8 * Local_u8TransDataCounter)); // masking word byte by byte to low register
+                                                                                  ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/CAN .c(282): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                CANx->sTxMailBox[Local_u8TransMailboxNumber].TDHR |= (TxMessage->DATA[Local_u8TransDataCounter] << (8 * (Local_u8TransDataCounter - 4)));// masking word byte by byte to high register
+                                                                                  ~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/CAN .c(2): warning: In file included from...
+./Files/CAN.h(212): warning: padding struct 'CanTxMsg' with 2 bytes to align 'ID' [-Wpadded]
+        u32 ID;  // message identifier
+            ^
+./Files/CAN.h(206): warning: padding size of 'CanTxMsg' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+Files/CAN .c(294): warning: declaration shadows a variable in the global scope [-Wshadow]
+void CAN_VoidReceive(CAN_TypeDef* CANx, u8 Copy_u8FifoNumber, CanRxMsg* RxMessage)
+                                                                        ^
+Files/CAN .c(7): note: previous declaration is here
+CanRxMsg*  RxMessage;               // CAN messge   struct  for  receiving
+           ^
+Files/CAN .c(2): warning: In file included from...
+./Files/CAN.h(229): warning: padding struct 'CanRxMsg' with 2 bytes to align 'ID' [-Wpadded]
+        u32 ID;  // message identifier
+            ^
+./Files/CAN.h(223): warning: padding size of 'CanRxMsg' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+Files/CAN .c(421): warning: no previous prototype for function 'USB_HP_CAN1_TX0_IRQHandler' [-Wmissing-prototypes]
+void USB_HP_CAN1_TX0_IRQHandler (void)
+     ^
+Files/CAN .c(421): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USB_HP_CAN1_TX0_IRQHandler (void)
+^
+static 
+Files/CAN .c(460): warning: implicit declaration of function 'GPIO_VoidSetPinValue' is invalid in C99 [-Wimplicit-function-declaration]
+                GPIO_VoidSetPinValue( GPIOA , 2 , 1); // TEST
+                ^
+Files/CAN .c(467): warning: incompatible pointer types passing 'CanRxMsg **' to parameter of type 'CanRxMsg *'; remove & [-Wincompatible-pointer-types]
+        CAN_VoidReceive ( CAN1 , CAN_FIFO0 ,&RxMessage);                       // read the message of FIFO 0
+                                            ^~~~~~~~~~
+Files/CAN .c(294): note: passing argument to parameter 'RxMessage' here
+void CAN_VoidReceive(CAN_TypeDef* CANx, u8 Copy_u8FifoNumber, CanRxMsg* RxMessage)
+                                                                        ^
+Files/CAN .c(474): warning: incompatible pointer types passing 'CanRxMsg **' to parameter of type 'CanRxMsg *'; remove & [-Wincompatible-pointer-types]
+        CAN_VoidReceive ( CAN1 , CAN_FIFO1,&RxMessage);                  // read the message    of FIFO 1
+                                           ^~~~~~~~~~
+Files/CAN .c(294): note: passing argument to parameter 'RxMessage' here
+void CAN_VoidReceive(CAN_TypeDef* CANx, u8 Copy_u8FifoNumber, CanRxMsg* RxMessage)
+                                                                        ^
+Files/CAN .c(457): warning: no previous prototype for function 'USB_LP_CAN1_RX0_IRQHandler' [-Wmissing-prototypes]
+void USB_LP_CAN1_RX0_IRQHandler (void) {
+     ^
+Files/CAN .c(457): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USB_LP_CAN1_RX0_IRQHandler (void) {
+^
+static 
+Files/CAN .c(7): warning: no previous extern declaration for non-static variable 'RxMessage' [-Wmissing-variable-declarations]
+CanRxMsg*  RxMessage;               // CAN messge   struct  for  receiving
+           ^
+Files/CAN .c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+CanRxMsg*  RxMessage;               // CAN messge   struct  for  receiving
+^
+18 warnings generated.
+compiling CAN .c...
+Files/STK_Program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(8): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8354): note: previous definition is here
+#define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+        ^
+Files/STK_Program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(22): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define SET_BIT(REG,BIT) (REG|=(1<<BIT))
+        ^
+./Files/BIT_MATH.h(8): note: previous definition is here
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+./Files/BIT_MATH.h(24): warning: 'CLEAR_BIT' macro redefined [-Wmacro-redefined]
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8356): note: previous definition is here
+#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+        ^
+Files/STK_Program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(36): warning: 'GET_BIT' macro redefined [-Wmacro-redefined]
+#define GET_BIT(REG,BIT)  ((REG >> BIT) & 1  )
+        ^
+./Files/BIT_MATH.h(14): note: previous definition is here
+#define    GET_BIT(REG,BIT)    ((REG>>BIT) & 1)
+           ^
+Files/STK_Program.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CLR_BIT(STK->CTRL, 0);
+        ^~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/STK_Program.c(20): warning: no previous prototype for function 'MSTK_voidSetBusyWait' [-Wmissing-prototypes]
+void MSTK_voidSetBusyWait( u32 Copy_u32Ticks )
+     ^
+Files/STK_Program.c(20): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void MSTK_voidSetBusyWait( u32 Copy_u32Ticks )
+^
+static 
+Files/STK_Program.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                          CLR_BIT( STK->CTRL,STK_EN); /*DISABLE STK*/
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/STK_Program.c(73): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CLR_BIT( STK -> CTRL , INT_EN);      
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/STK_Program.c(76): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CLR_BIT( STK -> CTRL , EN);         
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/STK_Program.c(88): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CLR_BIT( STK -> CTRL , INT_EN);    
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+10 warnings generated.
+compiling STK_Program.c...
+Files/NVIC_Program.c(3): warning: In file included from...
+./Files/BIT_MATH.h(8): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8354): note: previous definition is here
+#define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+        ^
+Files/NVIC_Program.c(3): warning: In file included from...
+./Files/BIT_MATH.h(22): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define SET_BIT(REG,BIT) (REG|=(1<<BIT))
+        ^
+./Files/BIT_MATH.h(8): note: previous definition is here
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+./Files/BIT_MATH.h(24): warning: 'CLEAR_BIT' macro redefined [-Wmacro-redefined]
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8356): note: previous definition is here
+#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+        ^
+Files/NVIC_Program.c(3): warning: In file included from...
+./Files/BIT_MATH.h(36): warning: 'GET_BIT' macro redefined [-Wmacro-redefined]
+#define GET_BIT(REG,BIT)  ((REG >> BIT) & 1  )
+        ^
+./Files/BIT_MATH.h(14): note: previous definition is here
+#define    GET_BIT(REG,BIT)    ((REG>>BIT) & 1)
+           ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(12): warning: 'WWDG' macro redefined [-Wmacro-redefined]
+#define     WWDG                                0             /*Window Watchdog interrupt*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1398): note: previous definition is here
+#define WWDG                ((WWDG_TypeDef *) WWDG_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(15): warning: 'RTC' macro redefined [-Wmacro-redefined]
+#define     RTC                                 3              /*RTC GLOBAL INTERRUPT*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1397): note: previous definition is here
+#define RTC                 ((RTC_TypeDef *) RTC_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(16): warning: 'FLASH' macro redefined [-Wmacro-redefined]
+#define     FLASH                               4              /*FLASH GLOBALINTERRUPT*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1453): note: previous definition is here
+#define FLASH               ((FLASH_TypeDef *) FLASH_R_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(17): warning: 'RCC' macro redefined [-Wmacro-redefined]
+#define     RCC                         5              /*RCC global interrupt*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1451): note: previous definition is here
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(30): warning: 'ADC3' macro redefined [-Wmacro-redefined]
+#define     ADC3                                47
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1429): note: previous definition is here
+#define ADC3                ((ADC_TypeDef *) ADC3_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(33): warning: 'SPI1' macro redefined [-Wmacro-redefined]
+#define     SPI1                                35
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1426): note: previous definition is here
+#define SPI1                ((SPI_TypeDef *) SPI1_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(34): warning: 'SPI2' macro redefined [-Wmacro-redefined]
+#define     SPI2                                36              
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1400): note: previous definition is here
+#define SPI2                ((SPI_TypeDef *) SPI2_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(35): warning: 'SPI3' macro redefined [-Wmacro-redefined]
+#define     SPI3                                51
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1401): note: previous definition is here
+#define SPI3                ((SPI_TypeDef *) SPI3_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(43): warning: 'TIM2' macro redefined [-Wmacro-redefined]
+#define     TIM2                                28
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1388): note: previous definition is here
+#define TIM2                ((TIM_TypeDef *) TIM2_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(44): warning: 'TIM3' macro redefined [-Wmacro-redefined]
+#define     TIM3                                29
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1389): note: previous definition is here
+#define TIM3                ((TIM_TypeDef *) TIM3_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(45): warning: 'TIM4' macro redefined [-Wmacro-redefined]
+#define     TIM4                                30
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1390): note: previous definition is here
+#define TIM4                ((TIM_TypeDef *) TIM4_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(46): warning: 'TIM5' macro redefined [-Wmacro-redefined]
+#define     TIM5                                50
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1391): note: previous definition is here
+#define TIM5                ((TIM_TypeDef *) TIM5_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(47): warning: 'TIM6' macro redefined [-Wmacro-redefined]
+#define     TIM6                                54
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1392): note: previous definition is here
+#define TIM6                ((TIM_TypeDef *) TIM6_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(48): warning: 'TIM7' macro redefined [-Wmacro-redefined]
+#define     TIM7                                55
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1393): note: previous definition is here
+#define TIM7                ((TIM_TypeDef *) TIM7_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(56): warning: 'USART1' macro redefined [-Wmacro-redefined]
+#define     USART1                              37
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: previous definition is here
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(57): warning: 'USART2' macro redefined [-Wmacro-redefined]
+#define     USART2                              38
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: previous definition is here
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(58): warning: 'USART3' macro redefined [-Wmacro-redefined]
+#define     USART3                              39
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: previous definition is here
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(59): warning: 'UART4' macro redefined [-Wmacro-redefined]
+#define     UART4                               52
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1404): note: previous definition is here
+#define UART4               ((USART_TypeDef *) UART4_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(60): warning: 'UART5' macro redefined [-Wmacro-redefined]
+#define     UART5                               53
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1405): note: previous definition is here
+#define UART5               ((USART_TypeDef *) UART5_BASE)
+        ^
+Files/NVIC_Program.c(4): warning: In file included from...
+./Files/NVIC_Interface.h(92): warning: 'SDIO' macro redefined [-Wmacro-redefined]
+#define     SDIO              49        /*SDIO global interrupt*/
+            ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1436): note: previous definition is here
+#define SDIO                ((SDIO_TypeDef *) SDIO_BASE)
+        ^
+Files/NVIC_Program.c(118): warning: variable 'Local_uint8LocalResult' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        else if (Copy_uint8IntNumber <= MAX_POS_NUM){  /*POSITION NUMBER LESS THAN 59*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/NVIC_Program.c(130): note: uninitialized use occurs here
+        return Local_uint8LocalResult;    /*GET ACTIVE FLAG VALUE*/
+               ^~~~~~~~~~~~~~~~~~~~~~
+Files/NVIC_Program.c(118): note: remove the 'if' if its condition is always true
+        else if (Copy_uint8IntNumber <= MAX_POS_NUM){  /*POSITION NUMBER LESS THAN 59*/
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/NVIC_Program.c(111): note: initialize the variable 'Local_uint8LocalResult' to silence this warning
+        uint8 Local_uint8LocalResult ;                                     /*LOCAL VAR TO SAVE FLAG VALUE*/
+                                    ^
+                                     = '\0'
+Files/NVIC_Program.c(142): warning: implicit conversion loses integer precision: 'int' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8 Local_uint8Priority =  ( Copy_uint8SubGroupPriority | Copy_uint8GroupPriority << (( Copy_uint32Group - 0X05FA0300) / 256 ));   /*THIS EQUATION TO GET FOUR BITS REPRESENT GROUP AND SUB GROUP PRIORITY*/
+              ~~~~~~~~~~~~~~~~~~~      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Files/NVIC_Program.c(147): warning: implicit conversion loses integer precision: 'int' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                NVIC_IPR[Copy_uint8IntID]= (Local_uint8Priority << 4 );  /*SHIFT Local_uint8Priority by 4 TO acces high 4 bits,low 4 bit is reversed*/
+                                         ~  ~~~~~~~~~~~~~~~~~~~~^~~~
+Files/NVIC_Program.c(194): warning: no previous prototype for function 'Soft_Reset_Req' [-Wmissing-prototypes]
+void Soft_Reset_Req(void)
+     ^
+Files/NVIC_Program.c(194): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Soft_Reset_Req(void)
+^
+static 
+28 warnings generated.
+compiling NVIC_Program.c...
+Files/RCC_program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(8): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8354): note: previous definition is here
+#define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+        ^
+Files/RCC_program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(22): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define SET_BIT(REG,BIT) (REG|=(1<<BIT))
+        ^
+./Files/BIT_MATH.h(8): note: previous definition is here
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+./Files/BIT_MATH.h(24): warning: 'CLEAR_BIT' macro redefined [-Wmacro-redefined]
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8356): note: previous definition is here
+#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+        ^
+Files/RCC_program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(36): warning: 'GET_BIT' macro redefined [-Wmacro-redefined]
+#define GET_BIT(REG,BIT)  ((REG >> BIT) & 1  )
+        ^
+./Files/BIT_MATH.h(14): note: previous definition is here
+#define    GET_BIT(REG,BIT)    ((REG>>BIT) & 1)
+           ^
+Files/RCC_program.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT(RCC_CR , RCC_HSE_BYP);            /*DISABLE EXTERNAL CLOCK BY PASS*/ 
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(17): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                       CLEAR_BIT(RCC_CFGR , RCC_SW1 );
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(72): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                  CLEAR_BIT(RCC_CFGR , RCC_MCO_2);    /*SET 1BITS ACCORDING TO CLOCK TYPE OTHER 2 IS NEGLIBALE*/
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(98): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLEAR_BIT(RCC_CFGR,RCC_ADCPRE0);      /*SET 2BIT ACCORDING TO PRESCALE CHOICE*/
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(99): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLEAR_BIT(RCC_CFGR,RCC_ADCPRE2);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(122): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                  CLEAR_BIT(RCC_CFGR,RCC_PPRE2_2);       /*SET 1BITS ACCORDING TO PRESCALE TYPE OTHER 2 IS NEGLIBALE*/
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(153): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                  CLEAR_BIT(RCC_CFGR , RCC_PPRE1_2);        /*SET 1BITS ACCORDING TO PRESCALE TYPE, OTHER 2 IS NEGLIBALE*/
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(185): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                CLEAR_BIT(RCC_CFGR , RCC_HPRE3);          /*SET 1BITS ACCORDING TO PRESCALE TYPE, OTHER 3 IS NEGLIBALE*/
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(244): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 CLEAR_BIT(RCC_CR,RCC_CSS_ON);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/RCC_program.c(342): warning: no newline at end of file [-Wnewline-eof]
+/****************************************************************END OF FUNCTION**************************************************************************************************************************************************************************************************************************/                                     
+                                                                                                                                                                                                                                                                                                                                                ^
+14 warnings generated.
+compiling RCC_program.c...
+Files/USART_program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(8): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8354): note: previous definition is here
+#define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+        ^
+Files/USART_program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(22): warning: 'SET_BIT' macro redefined [-Wmacro-redefined]
+#define SET_BIT(REG,BIT) (REG|=(1<<BIT))
+        ^
+./Files/BIT_MATH.h(8): note: previous definition is here
+#define    SET_BIT(REG,BIT)    (REG |= (1 << BIT))
+           ^
+./Files/BIT_MATH.h(24): warning: 'CLEAR_BIT' macro redefined [-Wmacro-redefined]
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8356): note: previous definition is here
+#define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+        ^
+Files/USART_program.c(2): warning: In file included from...
+./Files/BIT_MATH.h(36): warning: 'GET_BIT' macro redefined [-Wmacro-redefined]
+#define GET_BIT(REG,BIT)  ((REG >> BIT) & 1  )
+        ^
+./Files/BIT_MATH.h(14): note: previous definition is here
+#define    GET_BIT(REG,BIT)    ((REG>>BIT) & 1)
+           ^
+Files/USART_program.c(3): warning: non-portable path to file '"USART_interface.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "USART_Interface.h"
+         ^~~~~~~~~~~~~~~~~~~
+         "USART_interface.h"
+Files/USART_program.c(4): warning: non-portable path to file '"USART_private.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "USART_Private.h"
+         ^~~~~~~~~~~~~~~~~
+         "USART_private.h"
+Files/USART_program.c(4): warning: In file included from...
+./Files/USART_Private.h(19): warning: 'USART1' macro redefined [-Wmacro-redefined]
+#define         USART1   ((USART_TYPE *) 0x40013800)
+                ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: previous definition is here
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+        ^
+Files/USART_program.c(5): warning: non-portable path to file '"USART_config.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "USART_Config.h"
+         ^~~~~~~~~~~~~~~~
+         "USART_config.h"
+Files/USART_program.c(5): warning: In file included from...
+./Files/USART_Config.h(28): warning: '/*' within block comment [-Wcomment]
+#define       CLOCK_PHASE                   HIGH                                         /*CLOCK PHASE :LOW:The first clock transition is the first data capture edge*/
+                                                                                         ^
+Files/USART_program.c(6): warning: In file included from...
+./Files/GPIO_interface2.h(8): warning: 'GPIOA' macro redefined [-Wmacro-redefined]
+#define GPIOA        0
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: previous definition is here
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+        ^
+Files/USART_program.c(6): warning: In file included from...
+./Files/GPIO_interface2.h(9): warning: 'GPIOB' macro redefined [-Wmacro-redefined]
+#define GPIOB        1
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: previous definition is here
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+        ^
+Files/USART_program.c(6): warning: In file included from...
+./Files/GPIO_interface2.h(10): warning: 'GPIOC' macro redefined [-Wmacro-redefined]
+#define GPIOC        2
+        ^
+C:/Users/engme/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: previous definition is here
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+        ^
+Files/USART_program.c(41): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR1,PCE);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(48): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR1,PS);
+       ^~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(55): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR1,TCIE);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(68): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR2,STOP1);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(69): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR2,STOP2);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(77): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLEAR_BIT(USART1->CR2,CLKEN);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/USART_program.c(90): warning: 'CLOCK_PHASE' is not defined, evaluates to 0 [-Wundef]
+#if    CLOCK_PHASE == HIGH
+       ^
+Files/USART_program.c(92): warning: 'CLOCK_PHASE' is not defined, evaluates to 0 [-Wundef]
+#elif  CLOCK_PHASE == LOW
+       ^
+Files/USART_program.c(84): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLEAR_BIT(USART1->CR2,CPOL);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(24): note: expanded from macro 'CLEAR_BIT'
+#define CLEAR_BIT(REG,BIT) (REG&=(~(1<<BIT)))
+                               ~~ ^~~~~~~~~
+Files/USART_program.c(100): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR3,DMAR);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(107): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR3,DMAT);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(114): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+       CLR_BIT(USART1->CR3,EIE);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(154): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CLR_BIT( USART1 -> SR , TC );
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(148): warning: no previous prototype for function 'USART1_voidTransmitByte' [-Wmissing-prototypes]
+void  USART1_voidTransmitByte(u8 Copy_u8Data){                          /*SENT DATA */
+      ^
+Files/USART_program.c(148): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void  USART1_voidTransmitByte(u8 Copy_u8Data){                          /*SENT DATA */
+^
+static 
+Files/USART_program.c(162): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CLR_BIT ( USART1 -> SR,RXNE);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Files/BIT_MATH.h(10): note: expanded from macro 'CLR_BIT'
+#define    CLR_BIT(REG,BIT)    (REG &= ~(1 << BIT))
+                                    ~~ ^~~~~~~~~~~
+Files/USART_program.c(167): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned int') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        LOC_u8Data = USART1 -> DR;
+                   ~ ~~~~~~~~~~^~
+Files/USART_program.c(158): warning: no previous prototype for function 'USART1_uint8Receive' [-Wmissing-prototypes]
+u8 USART1_uint8Receive(void){                                 /*RECEIVE DATA */
+   ^
+Files/USART_program.c(158): note: declare 'static' if the function is not intended to be used outside of this translation unit
+u8 USART1_uint8Receive(void){                                 /*RECEIVE DATA */
+^
+static 
+Files/USART_program.c(209): warning: implicit conversion changes signedness: 'int' to 'u32' (aka 'unsigned int') [-Wsign-conversion]
+DATA = (HEX[3]<<24)|(HEX[2]<<16)|(HEX[1]<<8)|(HEX[0]);
+     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Files/USART_program.c(221): warning: implicit conversion loses integer precision: 'volatile u32' (aka 'volatile unsigned int') to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                *Copy_u8Data = USART1 -> DR;
+                             ~ ~~~~~~~~~~^~
+Files/USART_program.c(243): warning: no previous prototype for function 'USART1_IRQHandler' [-Wmissing-prototypes]
+void USART1_IRQHandler(void)
+     ^
+Files/USART_program.c(243): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART1_IRQHandler(void)
+^
+static 
+Files/USART_program.c(257): warning: no previous prototype for function 'USART1_DeInit' [-Wmissing-prototypes]
+void USART1_DeInit(void)
+     ^
+Files/USART_program.c(257): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART1_DeInit(void)
+^
+static 
+33 warnings generated.
+compiling USART_program.c...
+linking...
+Program Size: Code=2020 RO-data=296 RW-data=0 ZI-data=1648  
+FromELF: creating hex file...
+".\Objects\STD_CAN.axf" - 0 Error(s), 169 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_stm32f103xx
+  C:\Users\engme\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\engme\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
